@@ -1,0 +1,11 @@
+{
+  "name": "tanks",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.9.2",
+    "mongose": "^0.0.2-security",
+    "puppeteer": "^2.1.1"
+  }
+}
