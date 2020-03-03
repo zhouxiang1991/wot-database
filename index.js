@@ -1,5 +1,6 @@
 const fs =require('fs')
 const path =require('path')
+const axios =require('axios')
 const Mongo = require('./mongo')
 const mongoose = require('mongoose')
 const puppeteer = require('puppeteer')
@@ -9,6 +10,11 @@ const tank = new Mongo(dbURL, 'tanks', tankSchema)
 const tankLinkList = require('./tankLinkList.json')
 // const nationLinkList = require('./nationLinkList.json')
 // console.log(tankLinkList)
+axios({
+  url: 'https://api.worldoftanks.asia/wot/encyclopedia/vehicles/?application_id=47d226b7b1fba1286c3780be041b1603&language=zh-cn',
+}).then(item => {
+  fs.writeFileSync(path.resolve('./tanks.json'), JSON.stringify(item.data),{encoding: 'utf-8'})
+})
 
 // const data = fs.readFileSync(path.resolve('./data.json'))
 // const nationLinkList = fs.readFileSync(path.resolve('./nationLinkList.json'))
@@ -87,4 +93,4 @@ async function traverse() {
   process.exit()
 }
 
-traverse()
+// traverse()
