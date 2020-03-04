@@ -10,9 +10,9 @@ const lodash = require('lodash')
 const dbURL = 'mongodb://localhost:27017/wot'
 // const tank = new Mongo(dbURL, 'tanks', tankSchema)
 // const tankLinkList = require('./tankLinkList.json')
-let tanks = require('./tanks.json')
-tanks = tanks.data
-const modulesId = require('./modulesId.json')
+// let tanks = require('./tanks.json')
+// tanks = tanks.data
+// const modulesId = require('./modulesId.json')
 // console.log(modulesId.length)
 // const modules = []
 // for (const key in tanks) {
@@ -32,23 +32,23 @@ const modulesId = require('./modulesId.json')
 // }).then(item => {
 //   fs.writeFileSync(path.resolve('./tanks.json'), JSON.stringify(item.data),{encoding: 'utf-8'})
 // })
-async function abc() {
-  const array = lodash.chunk(modulesId, 100)
-  let count = 0
-  for (let index = 0; index < array.length; index++) {
-    const element = array[index];
-    axios({
-      url: 'https://api.worldoftanks.asia/wot/encyclopedia/modules/?application_id=47d226b7b1fba1286c3780be041b1603&language=zh-cn&extra=default_profile&module_id='+element.join(','),
-    }).then(item => {
-      // console.log(item.data)
-      count += Object.keys(item.data.data).length
-      console.log(count)
-      fs.writeFileSync(path.resolve('./modules/'+index+'.json'), JSON.stringify(item.data),{encoding: 'utf-8'})
-    })
-    await new Promise(resolve => setTimeout(resolve, 1000))
-  }
-}
-abc()
+// async function abc() {
+//   const array = lodash.chunk(modulesId, 100)
+//   let count = 0
+//   for (let index = 0; index < array.length; index++) {
+//     const element = array[index];
+//     axios({
+//       url: 'https://api.worldoftanks.asia/wot/encyclopedia/modules/?application_id=47d226b7b1fba1286c3780be041b1603&language=zh-cn&extra=default_profile&module_id='+element.join(','),
+//     }).then(item => {
+//       // console.log(item.data)
+//       count += Object.keys(item.data.data).length
+//       console.log(count)
+//       fs.writeFileSync(path.resolve('./modules/'+index+'.json'), JSON.stringify(item.data),{encoding: 'utf-8'})
+//     })
+//     await new Promise(resolve => setTimeout(resolve, 1000))
+//   }
+// }
+// abc()
 
 // const data = fs.readFileSync(path.resolve('./data.json'))
 // const nationLinkList = fs.readFileSync(path.resolve('./nationLinkList.json'))
@@ -57,38 +57,39 @@ abc()
 // const URL = 'https://wiki.wargaming.net/en/World_of_Tanks'
 // const URL = 'https://www.baidu.com'
 // var MongoClient = require('mongodb').MongoClient;
-// MongoClient.connect(dbURL, function(err, db) {
-// 	if(err){
-// 		console.error(err);
-// 		return;
-// 	}else{
-//     db = db.db('wot')
-//       console.log("Connected correctly to server");
-//         var collection = db.collection('modules');
-//         const counts = new Array(53).fill(1)
-//         let count = 0
-//         counts.forEach((item, index) => {
-//           console.log(index)
-//           let data = require('./modules/' + index + '.json')
-//           data = data.data
-//           count += Object.keys(data).length
-//           console.log(count)
-//           for (const key in data) {
-//             if (data.hasOwnProperty(key)) {
-//               const el = data[key];
-//               collection.insertOne(el)
-//             }
-//           }
-//         })
-//       // for (const key in tanks) {
-//       //   if (tanks.hasOwnProperty(key)) {
-//       //     const tank = tanks[key];
-//       //     console.log(tank)
-//       //     collection.insertOne(tank)
-//       //   }
-//       // }
-//   }
-// });
+MongoClient.connect(dbURL, function(err, db) {
+	if(err){
+		console.error(err);
+		return;
+	}else{
+    db = db.db('wot')
+      console.log("Connected correctly to server");
+      var modules = db.collection('modules');
+      var tanks = db.collection('tanks');
+        // const counts = new Array(53).fill(1)
+        // let count = 0
+        // counts.forEach((item, index) => {
+        //   console.log(index)
+        //   let data = require('./modules/' + index + '.json')
+        //   data = data.data
+        //   count += Object.keys(data).length
+        //   console.log(count)
+        //   for (const key in data) {
+        //     if (data.hasOwnProperty(key)) {
+        //       const el = data[key];
+        //       collection.insertOne(el)
+        //     }
+        //   }
+        // })
+      // for (const key in tanks) {
+      //   if (tanks.hasOwnProperty(key)) {
+      //     const tank = tanks[key];
+      //     console.log(tank)
+      //     collection.insertOne(tank)
+      //   }
+      // }
+  }
+});
 
 const URL = 'http://www.xiaosj.cn/tx/tank/list.aspx'
 
