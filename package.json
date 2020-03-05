@@ -3,10 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "serve": "vue-cli-service serve && node ./backend/index.js",
+    "front": "vue-cli-service serve",
+    "back": "node ./backend/index.js"
+  },
   "dependencies": {
     "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "element-ui": "^2.13.0",
+    "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "mongodb": "^3.5.4"
+    "mongodb": "^3.5.4",
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -34,11 +45,6 @@
     "postcss-nested": "^4.1.2",
     "postcss-preset-env": "^6.4.0",
     "postcss-property-lookup": "^2.0.0",
-    "pug": "^2.0.3",
-    "pug-filters": "^3.1.0",
-    "pug-loader": "^2.4.0",
-    "pug-plain-loader": "^1.0.0",
-    "shelljs": "^0.8.3",
     "stylelint": "^11.0.0",
     "stylelint-config-vue": "https://github.com/zhouxiang1991/stylelint-config-postcss",
     "svg-sprite-loader": "^4.1.6",

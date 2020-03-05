@@ -92,23 +92,43 @@
   "vim.insertModeKeyBindings": [],
   "vim.normalModeKeyBindings": [
     {
-      "before": ["K"],
-      "commands": ["editor.action.insertLineAfter"]
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.insertLineAfter"
+      ]
     },
     {
-      "before": ["u"],
-      "commands": ["undo"]
+      "before": [
+        "u"
+      ],
+      "commands": [
+        "undo"
+      ]
     },
     {
-      "before": ["<C-r>"],
-      "commands": ["redo"]
+      "before": [
+        "<C-r>"
+      ],
+      "commands": [
+        "redo"
+      ]
     },
     {
-      "before": ["<leader>", "n"],
-      "commands": [":nohl"]
+      "before": [
+        "<leader>",
+        "n"
+      ],
+      "commands": [
+        ":nohl"
+      ]
     },
     {
-      "before": ["Z", "Z"],
+      "before": [
+        "Z",
+        "Z"
+      ],
       "commands": [
         "workbench.action.files.save",
         "workbench.action.closeActiveEditor"
@@ -119,50 +139,109 @@
     //     "commands": ["workbench.action.files.save"]
     // },
     {
-      "before": ["<C-l>"],
-      "after": ["$", "v", "a", "{", "$", "o", "0"]
+      "before": [
+        "<C-l>"
+      ],
+      "after": [
+        "$",
+        "v",
+        "a",
+        "{",
+        "$",
+        "o",
+        "0"
+      ]
     },
     {
-      "before": ["<C-o>"],
-      "after": ["$", "v", "a", "[", "$", "o", "0"]
+      "before": [
+        "<C-o>"
+      ],
+      "after": [
+        "$",
+        "v",
+        "a",
+        "[",
+        "$",
+        "o",
+        "0"
+      ]
     },
     {
-      "before": ["g", "p"],
-      "after": ["o", "esc", "p"]
+      "before": [
+        "g",
+        "p"
+      ],
+      "after": [
+        "o",
+        "esc",
+        "p"
+      ]
     },
     {
-      "before": ["<C-k>"],
-      "commands": ["editor.action.moveLinesUpAction"]
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
     },
     {
-      "before": ["<C-j>"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
     },
     {
-      "before": ["\\"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "\\"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": ["L"],
-      "commands": ["editor.action.copyLinesDownAction"]
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "editor.action.copyLinesDownAction"
+      ]
     }
   ],
   "vim.visualModeKeyBindings": [
     {
-      "before": ["\\"],
-      "commands": ["editor.action.commentLine"]
+      "before": [
+        "\\"
+      ],
+      "commands": [
+        "editor.action.commentLine"
+      ]
     },
     {
-      "before": ["L"],
-      "commands": ["editor.action.copyLinesDownAction"]
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "editor.action.copyLinesDownAction"
+      ]
     },
     {
-      "before": ["<C-k>"],
-      "commands": ["editor.action.moveLinesUpAction"]
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "editor.action.moveLinesUpAction"
+      ]
     },
     {
-      "before": ["<C-j>"],
-      "commands": ["editor.action.moveLinesDownAction"]
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "editor.action.moveLinesDownAction"
+      ]
     }
   ],
   "vim.neovimPath": "/usr/local/bin/nvim",
@@ -185,7 +264,12 @@
   //   "extends": "clock"
   // },
   // eslint
-  "eslint.validate": ["javascript", "javascriptreact", "jsx", "vue"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "jsx",
+    "vue"
+  ],
   // 路径补全
   "path-intellisense.mappings": {
     "@": "${workspaceRoot}/src"

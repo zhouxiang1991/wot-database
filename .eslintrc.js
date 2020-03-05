@@ -1,10 +1,15 @@
 module.exports = {
   root: true,
   env: {
-    browser: true,
+    node: true
   },
-  extends: ["standard"],
+  'extends': [
+    '@vue/standard',
+    'plugin:vue/custom',
+  ],
+  rules: {
+  },
   parserOptions: {
-   ecmaVersion: 6
+    parser: 'babel-eslint'
   }
 }

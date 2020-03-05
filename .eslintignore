@@ -1,0 +1,6 @@
+node_modules
+/docs/
+/public/
+src/pages/jcsj
+/test/
+src/utils/axios
