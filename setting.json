@@ -1,0 +1,275 @@
+{
+  // 窗口
+  "window.zoomLevel": 1,
+  "window.title": "${activeEditorLong}${separator}${rootName}",
+  // 工作台
+  "workbench.editor.enablePreview": false,
+  "workbench.activityBar.visible": true,
+  "workbench.statusBar.visible": true,
+  "workbench.colorTheme": "One Dark Pro",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.colorCustomizations": {
+    "editor.selectionBackground": "#3E443D",
+    "editor.findMatchBackground": "#3E443D",
+    "editor.findMatchHighlightBackground": "#3E443D"
+  },
+  // 面包屑
+  "breadcrumbs.enabled": false,
+  // 文件
+  "files.associations": {
+    "*.css": "postcss",
+    "*.pug": "jade"
+  },
+  "files.eol": "\n",
+  // emmet
+  "emmet.triggerExpansionOnTab": true,
+  //将语法展开提示在提示列表中置顶
+  "editor.snippetSuggestions": "top",
+  //emmet只显示标记语言和样式表的展开提示
+  "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly",
+  //emmet能识别缩写语法的场景
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "plaintext": "jade"
+  },
+  // git
+  "git.path": "/usr/bin/git",
+  "git.enableSmartCommit": true,
+  // typescript
+  "typescript.validate.enable": false, // 关闭vscode对ts文件的lint功能, 由eslint处理
+  "typescript.tsc.autoDetect": "off",
+  // javascript
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false, // 关闭vscode对js文件的lint功能, 由eslint处理
+  // css
+  "css.validate": false, // 关闭vscode对css的lint功能, 由stylelint处理
+  // sass
+  "scss.validate": false, // 关闭vscode对scss的lint功能, 由stylelint处理
+  // less
+  "less.validate": false, // 关闭vscode对less的lint功能, 由stylelint处理
+  // 编辑器
+  "editor.minimap.renderCharacters": false,
+  "editor.fontFamily": "'HasklugNerdFontC-Medium',Monaco, 'Courier New', monospace",
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true, // 开启保存时自动格式化
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  // 资源管理器
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  // 终端
+  "terminal.integrated.rendererType": "dom",
+  // 语言相关
+  "[javascript]": {
+    "editor.formatOnSave": false // 取消编辑器对js文件的格式化, 以便eslint来处理
+  },
+  // "[css]": {
+  //   "editor.formatOnSave": false // 取消编辑器对css文件的格式化, 以便stylelint来处理
+  // },
+  // "[postcss]": {
+  //   "editor.formatOnSave": false // 取消编辑器对postcss文件的格式化, 以便stylelint来处理
+  // },
+  // "[less]": {
+  //   "editor.formatOnSave": false // 取消编辑器对less文件的格式化, 以便stylelint来处理
+  // },
+  // "[scss]": {
+  //   "editor.formatOnSave": false // 取消编辑器对scss文件的格式化, 以便stylelint来处理
+  // },
+  // vim
+  "vim.leader": "-",
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "vim.easymotion": true,
+  "vim.enableNeovim": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": true
+  },
+  "vim.insertModeKeyBindings": [],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["K"],
+      "commands": ["editor.action.insertLineAfter"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
+    },
+    {
+      "before": ["<C-r>"],
+      "commands": ["redo"]
+    },
+    {
+      "before": ["<leader>", "n"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["Z", "Z"],
+      "commands": [
+        "workbench.action.files.save",
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    // {
+    //     "before": ["<C-e>"],
+    //     "commands": ["workbench.action.files.save"]
+    // },
+    {
+      "before": ["<C-l>"],
+      "after": ["$", "v", "a", "{", "$", "o", "0"]
+    },
+    {
+      "before": ["<C-o>"],
+      "after": ["$", "v", "a", "[", "$", "o", "0"]
+    },
+    {
+      "before": ["g", "p"],
+      "after": ["o", "esc", "p"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    },
+    {
+      "before": ["\\"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["editor.action.copyLinesDownAction"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": ["\\"],
+      "commands": ["editor.action.commentLine"]
+    },
+    {
+      "before": ["L"],
+      "commands": ["editor.action.copyLinesDownAction"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["editor.action.moveLinesUpAction"]
+    },
+    {
+      "before": ["<C-j>"],
+      "commands": ["editor.action.moveLinesDownAction"]
+    }
+  ],
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "vim.autoSwitchInputMethod.enable": false,
+  "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
+  "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
+  "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
+  "vim.searchHighlightColor": "#3E443D",
+  // vetur
+  "vetur.validation.script": false, // 取消vue文件中的js代码的lint, 以便eslint来处理
+  "vetur.format.defaultFormatter.js": "none", // 取消vue文件中的js代码的format, 以便eslint来处理
+  "vetur.validation.template": false, // 取消vue文件中的hmtl代码的lint, 以便eslint来处理
+  "vetur.format.defaultFormatter.html": "none", // 取消vue文件中的hmtl代码的format, 以便eslint来处理
+  // "vetur.format.defaultFormatter.postcss": "none", // 取消vue文件中的postcss代码的lint, 以便stylelint来处理
+  // "vetur.format.defaultFormatter.css": "none", // 取消vue文件中的css代码的lint, 以便stylelint来处理
+  // "vetur.format.defaultFormatter.less": "none", // 取消vue文件中的less代码的lint, 以便stylelint来处理
+  // "vetur.format.defaultFormatter.scss": "none", // 取消vue文件中的scss代码的lint, 以便stylelint来处理
+  // "puglint.enable": true,
+  // "puglint.config": {
+  //   "extends": "clock"
+  // },
+  // eslint
+  "eslint.validate": ["javascript", "javascriptreact", "jsx", "vue"],
+  // 路径补全
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  },
+  // 图标
+  "vsicons.dontShowNewVersionMessage": true,
+  // diff
+  "diffEditor.ignoreTrimWhitespace": false,
+  // 拼写检查
+  "cSpell.userWords": [
+    "Scrollable",
+    "blueimp",
+    "btns",
+    "draggable",
+    "dropdown",
+    "iview",
+    "lintcss",
+    "lintjs",
+    "llks",
+    "mixins",
+    "postcss",
+    "promisify",
+    "rgba",
+    "savename",
+    "scrollbar",
+    "sjks",
+    "stylelint",
+    "submenu",
+    "tbody",
+    "thead",
+    "trunc",
+    "typeof",
+    "uncollapse",
+    "unshift",
+    "vuex",
+    "wisedu",
+    "wisudu",
+    "zhouxiang"
+  ],
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "go",
+    "handlebars",
+    "haskell",
+    "html",
+    "jade",
+    "java",
+    "javascript",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "pug",
+    "python",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "yaml",
+    "yml"
+  ],
+  "sync.gist": "b2e7f5c3a81eb3b8d4d28700383f9584",
+  "eslint.packageManager": "yarn",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "extensions.autoUpdate": true,
+  "extensions.closeExtensionDetailsOnViewChange": false,
+  "extensions.ignoreRecommendations": false,
+  "extensions.showRecommendationsOnlyOnDemand": false,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
